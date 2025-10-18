@@ -1,0 +1,108 @@
+/* Position the toggle button top-right */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  color: #1e40af;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 12px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 17px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  /* Products: 2 per row on mobile */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .product img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* About Page */
+  .about-container {
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+  }
+
+  .about-home {
+    width: 100%;
+    max-width: 250px;
+    font-size: 15px;
+  }
+
+/* Services Page */
+.services-container {
+  text-align: center;
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.service-card img {
+  height: 140px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* <- this is key */
+  gap: 20px;
+}
+
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px 0;
+    text-align: center;
+    height: auto;
+  }
+}

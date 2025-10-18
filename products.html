@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Dan-Grid Uplift</title>
+  <link rel="stylesheet" href="./css/products.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar container">
+      <div class="logo"><a href="index.html">⚡ Dan-Grid Uplift</a></div>
+      <!-- <div class="menu-toggle" id="menu-toggle">☰</div> -->
+      <nav id="nav-links" class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h1 class="title">Products</h1>
+    <div class="grid container">
+      <!-- Single MPCB item -->
+      <div class="product" data-group="mpcb">
+        <img src="images/products/mpcb1.jpeg" alt="MPCB">
+        <p>MPCB - Click to display types</p>
+      </div>
+
+      <!-- Other products -->
+      <div class="product">
+        <img src="images/products/cctv.jpg" alt="CCTV">
+        <p>CCTV</p>
+      </div>
+
+      <!-- Single Contactor item -->
+      
+
+      <div class="product">
+        <img src="images/products/watertight.png" alt="Watertight">
+        <p>Watertight</p>
+      </div>
+
+      <div class="product">
+        <img src="images/products/cables.jpg" alt="Cables">
+        <p>Cables</p>
+      </div>
+
+      <div class="product">
+        <img src="images/products/floodlight.png" alt="Floodlight">
+        <p>Floodlight</p>
+      </div>
+      
+      <div class="product" data-group="contactors">
+        <img src="images/products/contactors1.jpeg" alt="Contactors">
+        <p>Contactors - Click to display types</p>
+      </div>
+
+      
+    </div>
+  </main>
+
+  <footer>&copy;<script>document.write(new Date().getFullYear())</script> Dan-Grid Uplift</footer>
+
+  <!-- Modal -->
+  <div class="modal" id="popup-modal">
+    <div class="modal-content">
+      <button class="close-btn" id="close-modal">Close</button>
+      <div id="popup-images" class="gallery"></div>
+      <h3 class="modal-title" id="modal-title"></h3>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('popup-modal');
+    const popupImages = document.getElementById('popup-images');
+    const closeModal = document.getElementById('close-modal');
+    const modalTitle = document.getElementById('modal-title');
+
+    const productGroups = {
+      mpcb: [
+        "images/products/mpcb1.jpeg",
+        "images/products/mpcb2.jpeg",
+        "images/products/mpcb3.jpeg"
+      ],
+      contactors: [
+        "images/products/contactors1.jpeg",
+        "images/products/contactors2.jpeg",
+        "images/products/contactors3.jpeg",
+        "images/products/contactors4.jpeg"
+      ]
+    };
+
+    document.querySelectorAll('.product[data-group]').forEach(item => {
+      item.addEventListener('click', () => {
+        const group = item.getAttribute('data-group');
+        popupImages.innerHTML = '';
+        productGroups[group].forEach(src => {
+          const img = document.createElement('img');
+          img.src = src.trim();
+          popupImages.appendChild(img);
+        });
+        modalTitle.textContent = group.toUpperCase();
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>

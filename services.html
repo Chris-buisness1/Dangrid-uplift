@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+    <header>
+    <div class="nav-bar container">
+  <div class="logo"><a href="index.html">⚡ Dan-Grid Uplift</a></div>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <nav id="nav-links" class="nav-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+</nav>
+</div>
+
+  </header>
+
+  <main class="services-container">
+    <h1>Our Electrical Services</h1>
+    <p class="intro">
+      We provide high-quality electrical solutions for residential, commercial, and industrial needs.
+      Our experienced team is always ready to assist with professional service and safety at the core.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/services/cctv.jpg" alt="CCTV Installation" />
+        <h2>CCTV Camera Installation</h2>
+        <p>Secure homes and businesses with high-tech camera systems professionally installed.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/wiring.jpg" alt="Commercial Wiring" />
+        <h2>Commercial Wiring</h2>
+        <p>Safe and efficient wiring systems for shops, offices, and commercial buildings.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/emergency.jpg" alt="Emergency Repairs" />
+        <h2>Emergency Repairs</h2>
+        <p>24/7 fault fixing, power restoration, and hazard prevention services.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/generator.jpg" alt="Generator Installation" />
+        <h2>Generator Installation</h2>
+        <p>Install reliable backup generators to keep you running during power cuts.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/maintanance.jpg" alt="Maintenance and Testing" />
+        <h2>Maintenance & Testing</h2>
+        <p>Routine inspections and testing for electrical systems’ safety and performance.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/solor.jpg" alt="Solar Power Setup" />
+        <h2>Solar Power Setup</h2>
+        <p>Install green, sustainable solar solutions to reduce electricity bills and emissions.</p>
+      </div>
+    </div>
+  </main>
+
+<footer>&copy;<script>document.write(new Date().getFullYear())</script> Dan-Grid Uplift</footer>
+
+    <!-- JAVA Script  -->
+ <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
