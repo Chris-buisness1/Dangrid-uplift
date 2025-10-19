@@ -77,6 +77,15 @@
   </div>
 
   <script>
+
+    const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+    
     const modal = document.getElementById('popup-modal');
     const popupImages = document.getElementById('popup-images');
     const closeModal = document.getElementById('close-modal');
@@ -125,6 +134,7 @@
   </script>
 </body>
 </html>
+
 
 
 
