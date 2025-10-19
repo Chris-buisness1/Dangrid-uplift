@@ -24,6 +24,21 @@
     z-index: 1000;
   }
 
+
+
+
+  #nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+#nav-links.active {
+  display: flex;
+}
+
+
   nav {
     display: none;
     flex-direction: column;
@@ -106,3 +121,4 @@
     height: auto;
   }
 }
+
